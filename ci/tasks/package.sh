@@ -1,13 +1,14 @@
-```bash
 #!/bin/bash
 
 set -e +x
- echo "About to build"
+ 
+  echo "About to build"
 pushd movie-fun
   echo "Packaging WAR"
   ./mvn clean package -DskipTests -Dmaven.test.skip=true
 popd
-echo "Building done"
+   
+  echo "Building done"
 
 
 jar_count=`find movie-fun/target -type f -name *.war | wc -l`
@@ -21,5 +22,3 @@ echo "move the file to package output"
 find movie-fun/target -type f -name *.war -exec cp "{}" package-output/moviefun.war \;
 
 echo "Done packaging"
-
-```
