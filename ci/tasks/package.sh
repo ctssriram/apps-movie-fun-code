@@ -5,7 +5,7 @@ set -e +x
   echo "About to build"
 pushd movie-fun
   echo "Packaging WAR"
-  ./mvn clean package -DskipTests -Dmaven.test.skip=true
+  ./mvnw clean package -DskipTests -Dmaven.test.skip=true
 popd
    
   echo "Building done"
