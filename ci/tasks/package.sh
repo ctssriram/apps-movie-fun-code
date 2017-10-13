@@ -5,6 +5,7 @@ set -e +x
   echo "About to build"
 pushd movie-fun
   echo "Packaging WAR"
+  ./mvnw clean compile > /dev/null
   ./mvnw clean package -DskipTests -Dmaven.test.skip=true
 popd
    
